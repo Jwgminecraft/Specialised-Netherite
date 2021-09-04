@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+        "base": {
+            "item": "minecraft:netherite_sword"
+            },
+        "addition": {
+            "item": "specialnetherite:sharp_crystal"
+            },
+  "result": {
+    "item": "specialnetherite:sharp_netherite_sword",
+    "count": 1
+  }
+}

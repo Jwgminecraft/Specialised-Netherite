@@ -1,9 +1,29 @@
 {
-	"item.specialnetherite.defence_crystal_shard": "Defence Crystal Shard",
-	"item.specialnetherite.strong_crystal_shard": "Strong Crystal Shard",
 	"item.specialnetherite.defence_crystal": "Defence Crystal",
-	"item.specialnetherite.strong_crystal": "Strong Crystal",
+	"item.specialnetherite.defence_crystal_shard": "Defence Crystal Shard",
+	"block.specialnetherite.defence_crystal_ore": "Defence Crystal Ore",
 	
+	"item.specialnetherite.strong_netherite_sword": "Strong Netherite Sword",
+	"item.specialnetherite.strong_netherite_pickaxe": "Strong Netherite Pickaxe",
+	"item.specialnetherite.strong_netherite_axe": "Strong Netherite Axe",
+	"item.specialnetherite.strong_netherite_shovel": "Strong Netherite Shovel",
+	"item.specialnetherite.strong_netherite_hoe": "Strong Netherite Hoe",	
+	"item.specialnetherite.strong_crystal_shard": "Strong Crystal Shard",
+	"item.specialnetherite.strong_crystal": "Strong Crystal",
 	"block.specialnetherite.strong_crystal_ore": "Strong Crystal Ore",
-	"block.specialnetherite.defence_crystal_ore": "Defence Crystal Ore"
+	
+	"item.specialnetherite.enchanted_crystal": "Enchanted Crystal Shard",
+	"item.specialnetherite.enchanted_crystal_shard": "Enchanted Crystal Shard",
+	"block.specialnetherite.enchanted_crystal_ore": "Enchanted Crystal Ore",	
+
+	"item.specialnetherite.sharp_netherite_axe": "Sharpened Netherite Axe",
+	"item.specialnetherite.sharp_netherite_sword": "Sharpened Netherite Sword",	
+	"item.specialnetherite.sharp_crystal": "Sharp Crystal Shard",
+	"item.specialnetherite.sharp_crystal_shard": "Sharp Crystal Shard",
+	"block.specialnetherite.sharp_crystal_ore": "Sharp Crystal Ore",	
+	
+	"item.specialnetherite.knockback_resistance_crystal": "Knockback Resistance Crystal Shard",
+	"item.specialnetherite.knockback_resistance_crystal_shard": "Knockback Resistance Crystal Shard",
+	"block.specialnetherite.knockback_resistance_crystal_ore": "Knockback Resistance Crystal Ore"
+
 }
