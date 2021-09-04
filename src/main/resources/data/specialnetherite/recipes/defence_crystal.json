@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+     "ingredients": [
+        {
+            "item": "specialnetherite:defence_crystal_shard"
+        },
+		    {
+            "item": "specialnetherite:defence_crystal_shard"
+        },
+		    {
+            "item": "specialnetherite:defence_crystal_shard"
+        },
+			{
+            "item": "specialnetherite:defence_crystal_shard"
+        }
+    ],
+  "result": {
+    "item": "specialnetherite:defence_crystal",
+    "count": 1
+  }
+}

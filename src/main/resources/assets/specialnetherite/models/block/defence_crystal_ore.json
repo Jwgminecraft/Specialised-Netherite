@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "specialnetherite:block/defence_crystal_ore"
+  }
+}
