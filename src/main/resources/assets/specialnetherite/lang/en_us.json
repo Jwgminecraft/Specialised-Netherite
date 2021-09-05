@@ -7,18 +7,25 @@
 	"item.specialnetherite.strong_netherite_pickaxe": "Strong Netherite Pickaxe",
 	"item.specialnetherite.strong_netherite_axe": "Strong Netherite Axe",
 	"item.specialnetherite.strong_netherite_shovel": "Strong Netherite Shovel",
-	"item.specialnetherite.strong_netherite_hoe": "Strong Netherite Hoe",	
+	"item.specialnetherite.strong_netherite_hoe": "Strong Netherite Hoe",
+	
+	"item.specialnetherite.enchanted_netherite_sword": "Enchanted Netherite Sword",
+	"item.specialnetherite.enchanted_netherite_pickaxe": "Enchanted Netherite Pickaxe",
+	"item.specialnetherite.enchanted_netherite_axe": "Enchanted Netherite Axe",
+	"item.specialnetherite.enchanted_netherite_shovel": "Enchanted Netherite Shovel",
+	"item.specialnetherite.enchanted_netherite_hoe": "Enchanted Netherite Hoe",	
+	
 	"item.specialnetherite.strong_crystal_shard": "Strong Crystal Shard",
 	"item.specialnetherite.strong_crystal": "Strong Crystal",
 	"block.specialnetherite.strong_crystal_ore": "Strong Crystal Ore",
 	
-	"item.specialnetherite.enchanted_crystal": "Enchanted Crystal Shard",
+	"item.specialnetherite.enchanted_crystal": "Enchanted Crystal",
 	"item.specialnetherite.enchanted_crystal_shard": "Enchanted Crystal Shard",
 	"block.specialnetherite.enchanted_crystal_ore": "Enchanted Crystal Ore",	
 
 	"item.specialnetherite.sharp_netherite_axe": "Sharpened Netherite Axe",
 	"item.specialnetherite.sharp_netherite_sword": "Sharpened Netherite Sword",	
-	"item.specialnetherite.sharp_crystal": "Sharp Crystal Shard",
+	"item.specialnetherite.sharp_crystal": "Sharp Crystal",
 	"item.specialnetherite.sharp_crystal_shard": "Sharp Crystal Shard",
 	"block.specialnetherite.sharp_crystal_ore": "Sharp Crystal Ore",	
 	

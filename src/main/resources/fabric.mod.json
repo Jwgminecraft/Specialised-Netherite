@@ -3,18 +3,18 @@
   "id": "modid",
   "version": "V0.1",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Specialised Netherite",
+  "description": "This mod adds some specialised netherite tools, to add new tiers and difficult choices into the game!",
   "authors": [
-    "Me!"
+    "JWG AKA JWGStudios"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "",
+    "sources": "https://github.com/JWGardiner/Specialised-Netherite"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "Custom",
+  "icon": "assets/icon.png",
 
   "environment": "*",
   "entrypoints": {
