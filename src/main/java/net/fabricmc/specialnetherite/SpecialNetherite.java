@@ -3,6 +3,7 @@ package net.fabricmc.specialnetherite;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
@@ -26,20 +27,28 @@ import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 
 
 public class SpecialNetherite implements ModInitializer {
+	public static final Item CRYSTALS_ICON = new Item(new FabricItemSettings());
+	public static final Item TOOLS_ICON = new Item(new FabricItemSettings());
+	public static final ItemGroup CRYSTALS = FabricItemGroupBuilder.build(
+			new Identifier("specialnetherite", "crystals"),
+			() -> new ItemStack(CRYSTALS_ICON));
 
-
+	public static final ItemGroup TOOLS = FabricItemGroupBuilder.create(
+					new Identifier("specialnetherite", "tools"))
+			.icon(() -> new ItemStack(TOOLS_ICON))
+			.build();
 
 	//Add the strong crystals
-	public static final Item STRONG_CRYSTAL = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-	public static final Item STRONG_CRYSTAL_SHARD = new Item(new FabricItemSettings().group(ItemGroup.MISC));
+	public static final Item STRONG_CRYSTAL = new Item(new FabricItemSettings().group(CRYSTALS));
+	public static final Item STRONG_CRYSTAL_SHARD = new Item(new FabricItemSettings().group(CRYSTALS));
 	public static final Block STRONG_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
 	//Add the enchanted crystals
-	public static final Item ENCHANTABILITY_CRYSTAL = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-	public static final Item ENCHANTABILITY_CRYSTAL_SHARD = new Item(new FabricItemSettings().group(ItemGroup.MISC));
+	public static final Item ENCHANTABILITY_CRYSTAL = new Item(new FabricItemSettings().group(CRYSTALS));
+	public static final Item ENCHANTABILITY_CRYSTAL_SHARD = new Item(new FabricItemSettings().group(CRYSTALS));
 	public static final Block ENCHANTABILITY_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
 	//Add the sharp crystals
-	public static final Item SHARP_CRYSTAL = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-	public static final Item SHARP_CRYSTAL_SHARD = new Item(new FabricItemSettings().group(ItemGroup.MISC));
+	public static final Item SHARP_CRYSTAL = new Item(new FabricItemSettings().group(CRYSTALS));
+	public static final Item SHARP_CRYSTAL_SHARD = new Item(new FabricItemSettings().group(CRYSTALS));
 	public static final Block SHARP_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
 
 
@@ -86,8 +95,8 @@ public class SpecialNetherite implements ModInitializer {
 
 
 	}
-	public ToolItem SHARP_NETHERITE_AXE = new SharpNetherite.SharpAxe(SharpNetherite.INSTANCE, 4,0, new Item.Settings().group(ItemGroup.MISC));
-	public static ToolItem SHARP_NETHERITE_SWORD = new SwordItem(SharpNetherite.INSTANCE, 0, 0, new Item.Settings().group(ItemGroup.MISC));
+	public ToolItem SHARP_NETHERITE_AXE = new SharpNetherite.SharpAxe(SharpNetherite.INSTANCE, 4,0, new Item.Settings().group(TOOLS));
+	public static ToolItem SHARP_NETHERITE_SWORD = new SwordItem(SharpNetherite.INSTANCE, 0, 0, new Item.Settings().group(TOOLS));
 
 	//Strong Tools
 	static class StrongNetherite implements ToolMaterial {
@@ -140,11 +149,11 @@ public class SpecialNetherite implements ModInitializer {
 		}
 
 	}
-	public static ToolItem STRONG_NETHERITE_SWORD = new SwordItem(StrongNetherite.INSTANCE, -7, -3.4f, new Item.Settings().group(ItemGroup.MISC));
-	public static ToolItem STRONG_NETHERITE_PICKAXE = new StrongNetherite.StrongPickaxe(StrongNetherite.INSTANCE, -11,-2.8f, new Item.Settings().group(ItemGroup.MISC));
-	public static ToolItem STRONG_NETHERITE_AXE = new StrongNetherite.StrongAxe(StrongNetherite.INSTANCE, -7, -2, new Item.Settings().group(ItemGroup.MISC));
-	public static ToolItem STRONG_NETHERITE_SHOVEL = new ShovelItem(StrongNetherite.INSTANCE, -7.5f, 0, new Item.Settings().group(ItemGroup.MISC));
-	public static ToolItem STRONG_NETHERITE_HOE = new StrongNetherite.StrongHoe(StrongNetherite.INSTANCE, -16, 0, new Item.Settings().group(ItemGroup.MISC));
+	public static ToolItem STRONG_NETHERITE_SWORD = new SwordItem(StrongNetherite.INSTANCE, -7, -3.4f, new Item.Settings().group(TOOLS));
+	public static ToolItem STRONG_NETHERITE_PICKAXE = new StrongNetherite.StrongPickaxe(StrongNetherite.INSTANCE, -11,-2.8f, new Item.Settings().group(TOOLS));
+	public static ToolItem STRONG_NETHERITE_AXE = new StrongNetherite.StrongAxe(StrongNetherite.INSTANCE, -7, -2, new Item.Settings().group(TOOLS));
+	public static ToolItem STRONG_NETHERITE_SHOVEL = new ShovelItem(StrongNetherite.INSTANCE, -7.5f, 0, new Item.Settings().group(TOOLS));
+	public static ToolItem STRONG_NETHERITE_HOE = new StrongNetherite.StrongHoe(StrongNetherite.INSTANCE, -16, 0, new Item.Settings().group(TOOLS));
 	//Enchanted Tools
 	static class EnchantedNetherite implements ToolMaterial {
 		public static final SharpNetherite INSTANCE = new SharpNetherite();
@@ -196,11 +205,11 @@ public class SpecialNetherite implements ModInitializer {
 		}
 
 	}
-	public static ToolItem ENCHANTED_NETHERITE_SWORD = new SwordItem(EnchantedNetherite.INSTANCE, -9, -2.4f, new Item.Settings().group(ItemGroup.MISC));
-	public static ToolItem ENCHANTED_NETHERITE_PICKAXE = new EnchantedNetherite.EnchantedPickaxe(EnchantedNetherite.INSTANCE, -11,-2.8f, new Item.Settings().group(ItemGroup.MISC));
-	public static ToolItem ENCHANTED_NETHERITE_AXE = new EnchantedNetherite.EnchantedAxe(EnchantedNetherite.INSTANCE, -7, -3, new Item.Settings().group(ItemGroup.MISC));
-	public static ToolItem ENCHANTED_NETHERITE_SHOVEL = new ShovelItem(EnchantedNetherite.INSTANCE, -10.5f, -3, new Item.Settings().group(ItemGroup.MISC));
-	public static ToolItem ENCHANTED_NETHERITE_HOE = new EnchantedNetherite.EnchantedHoe(EnchantedNetherite.INSTANCE, -16, 0, new Item.Settings().group(ItemGroup.MISC));
+	public static ToolItem ENCHANTED_NETHERITE_SWORD = new SwordItem(EnchantedNetherite.INSTANCE, -9, -2.4f, new Item.Settings().group(TOOLS));
+	public static ToolItem ENCHANTED_NETHERITE_PICKAXE = new EnchantedNetherite.EnchantedPickaxe(EnchantedNetherite.INSTANCE, -11,-2.8f, new Item.Settings().group(TOOLS));
+	public static ToolItem ENCHANTED_NETHERITE_AXE = new EnchantedNetherite.EnchantedAxe(EnchantedNetherite.INSTANCE, -7, -3, new Item.Settings().group(TOOLS));
+	public static ToolItem ENCHANTED_NETHERITE_SHOVEL = new ShovelItem(EnchantedNetherite.INSTANCE, -10.5f, -3, new Item.Settings().group(TOOLS));
+	public static ToolItem ENCHANTED_NETHERITE_HOE = new EnchantedNetherite.EnchantedHoe(EnchantedNetherite.INSTANCE, -16, 0, new Item.Settings().group(TOOLS));
 	private static ConfiguredFeature<?, ?> ENCHANTED_CRYSTAL_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
@@ -233,6 +242,9 @@ public class SpecialNetherite implements ModInitializer {
 
 
 
+
+
+
 	@Override
 	public void onInitialize() {
 
@@ -252,6 +264,8 @@ public class SpecialNetherite implements ModInitializer {
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, enchantedCrystalOverworld.getValue(), ENCHANTED_CRYSTAL_OVERWORLD);
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, enchantedCrystalOverworld);
 
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "icon1"), TOOLS_ICON);
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "icon2"), CRYSTALS_ICON);
 
 		//Register the tools
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "sharp_netherite_sword"), SHARP_NETHERITE_SWORD);

@@ -31,6 +31,9 @@
 	
 	"item.specialnetherite.knockback_resistance_crystal": "Knockback Resistance Crystal Shard",
 	"item.specialnetherite.knockback_resistance_crystal_shard": "Knockback Resistance Crystal Shard",
-	"block.specialnetherite.knockback_resistance_crystal_ore": "Knockback Resistance Crystal Ore"
+	"block.specialnetherite.knockback_resistance_crystal_ore": "Knockback Resistance Crystal Ore",
+	
+	"itemGroup.specialnetherite.crystals": "Crystals",
+	"itemGroup.specialnetherite.tools": "Tools"
 
 }
