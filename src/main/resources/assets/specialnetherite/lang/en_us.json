@@ -9,6 +9,10 @@
 	"item.specialnetherite.strong_netherite_shovel": "Strong Netherite Shovel",
 	"item.specialnetherite.strong_netherite_hoe": "Strong Netherite Hoe",
 	
+	"block.specialnetherite.enchanted_crystal_ore": "Tin Ore",	
+	"item.specialnetherite.raw_tin": "Raw Tin",
+	"item.specialnetherite.tin_ingot": "Tin Ingot",
+	
 	"item.specialnetherite.enchanted_netherite_sword": "Enchanted Netherite Sword",
 	"item.specialnetherite.enchanted_netherite_pickaxe": "Enchanted Netherite Pickaxe",
 	"item.specialnetherite.enchanted_netherite_axe": "Enchanted Netherite Axe",
@@ -34,6 +38,7 @@
 	"block.specialnetherite.knockback_resistance_crystal_ore": "Knockback Resistance Crystal Ore",
 	
 	"itemGroup.specialnetherite.crystals": "Crystals",
-	"itemGroup.specialnetherite.tools": "Tools"
+	"itemGroup.specialnetherite.tools": "Tools",
+	"itemGroup.specialnetherite.ores": "Ores"
 
 }
