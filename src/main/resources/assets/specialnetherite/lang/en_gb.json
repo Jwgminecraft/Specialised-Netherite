@@ -8,11 +8,12 @@
 	"item.specialnetherite.strong_netherite_axe": "Strong Netherite Axe",
 	"item.specialnetherite.strong_netherite_shovel": "Strong Netherite Shovel",
 	"item.specialnetherite.strong_netherite_hoe": "Strong Netherite Hoe",
-	
+
+	"block.specialnetherite.tin_block": "Tin Block",
+	"block.specialnetherite.bronze_block": "Bronze Block",
 	"block.specialnetherite.tin_ore": "Tin Ore",
 	"item.specialnetherite.raw_tin": "Raw Tin",
 	"item.specialnetherite.tin_ingot": "Tin Ingot",
-
 	"item.specialnetherite.raw_bronze": "Raw Bronze",
 	"item.specialnetherite.bronze_ingot": "Bronze Ingot",
 	
