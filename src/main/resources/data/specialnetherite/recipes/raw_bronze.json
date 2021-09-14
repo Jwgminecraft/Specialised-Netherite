@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "specialnetherite:raw_bronze"
+  },
+  "result": "specialnetherite:bronze_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}

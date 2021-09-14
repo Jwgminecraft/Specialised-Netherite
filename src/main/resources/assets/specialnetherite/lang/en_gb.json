@@ -9,9 +9,12 @@
 	"item.specialnetherite.strong_netherite_shovel": "Strong Netherite Shovel",
 	"item.specialnetherite.strong_netherite_hoe": "Strong Netherite Hoe",
 	
-	"block.specialnetherite.enchanted_crystal_ore": "Tin Ore",	
+	"block.specialnetherite.tin_ore": "Tin Ore",
 	"item.specialnetherite.raw_tin": "Raw Tin",
 	"item.specialnetherite.tin_ingot": "Tin Ingot",
+
+	"item.specialnetherite.raw_bronze": "Raw Bronze",
+	"item.specialnetherite.bronze_ingot": "Bronze Ingot",
 	
 	"item.specialnetherite.enchanted_netherite_sword": "Enchanted Netherite Sword",
 	"item.specialnetherite.enchanted_netherite_pickaxe": "Enchanted Netherite Pickaxe",

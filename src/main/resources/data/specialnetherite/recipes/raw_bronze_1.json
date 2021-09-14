@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+     "ingredients": [
+        {
+            "item": "specialnetherite:raw_tin"
+        },
+		    {
+            "item": "specialnetherite:raw_tin"
+        },
+		    {
+            "item": "minecraft:raw_copper"
+        },
+			{
+            "item": "minecraft:raw_copper"
+        }
+    ],
+  "result": {
+    "item": "specialnetherite:raw_bronze",
+    "count": 1
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+     "ingredients": [
+        {
+            "item": "specialnetherite:tin_ingot"
+        },
+		    {
+            "item": "specialnetherite:tin_ingot"
+        },
+        {
+            "item": "specialnetherite:tin_ingot"
+        },
+		        {
+            "item": "specialnetherite:tin_ingot"
+        },
+		        {
+            "item": "specialnetherite:tin_ingot"
+        },
+		        {
+            "item": "specialnetherite:tin_ingot"
+        },
+		        {
+            "item": "specialnetherite:tin_ingot"
+        },
+		        {
+            "item": "specialnetherite:tin_ingot"
+        },
+        {
+            "item": "specialnetherite:tin_ingot"
+        }
+    ],
+  "result": {
+    "item": "specialnetherite:tin_block",
+    "count": 1
+  }
+}

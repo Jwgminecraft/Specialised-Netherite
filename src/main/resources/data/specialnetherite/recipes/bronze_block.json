@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+     "ingredients": [
+        {
+            "item": "specialnetherite:bronze_ingot"
+        },
+		    {
+            "item": "specialnetherite:bronze_ingot"
+        },
+        {
+            "item": "specialnetherite:bronze_ingot"
+        },
+		        {
+            "item": "specialnetherite:bronze_ingot"
+        },
+		        {
+            "item": "specialnetherite:bronze_ingot"
+        },
+		        {
+            "item": "specialnetherite:bronze_ingot"
+        },
+		        {
+            "item": "specialnetherite:bronze_ingot"
+        },
+		        {
+            "item": "specialnetherite:bronze_ingot"
+        },
+        {
+            "item": "specialnetherite:bronze_ingot"
+        }
+    ],
+  "result": {
+    "item": "specialnetherite:bronze_block",
+    "count": 1
+  }
+}
