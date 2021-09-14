@@ -9,10 +9,8 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -26,7 +24,11 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 
 
+
 public class SpecialNetherite implements ModInitializer {
+
+
+
 	public static final Item CRYSTALS_ICON = new Item(new FabricItemSettings());
 	public static final Item TOOLS_ICON = new Item(new FabricItemSettings());
 	public static final Block ENCHANTABILITY_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
@@ -60,6 +62,8 @@ public class SpecialNetherite implements ModInitializer {
 
 	//Sharpened Tools
 	static class SharpNetherite implements ToolMaterial {
+
+
 		public static final SharpNetherite INSTANCE = new SharpNetherite();
 
 		@Override
@@ -69,7 +73,7 @@ public class SpecialNetherite implements ModInitializer {
 
 		@Override
 		public float getMiningSpeedMultiplier() {
-			return 1.6f;
+			return 6f;
 		}
 
 		@Override
@@ -100,8 +104,8 @@ public class SpecialNetherite implements ModInitializer {
 
 
 	}
-	public ToolItem SHARP_NETHERITE_AXE = new SharpNetherite.SharpAxe(SharpNetherite.INSTANCE, 4,0, new Item.Settings().group(TOOLS));
-	public static ToolItem SHARP_NETHERITE_SWORD = new SwordItem(SharpNetherite.INSTANCE, 0, 0, new Item.Settings().group(TOOLS));
+	public ToolItem SHARP_NETHERITE_AXE = new SharpNetherite.SharpAxe(SharpNetherite.INSTANCE, 4,0, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem SHARP_NETHERITE_SWORD = new SwordItem(SharpNetherite.INSTANCE, 0, 0, new Item.Settings().group(TOOLS).fireproof());
 
 	//Strong Tools
 	static class StrongNetherite implements ToolMaterial {
@@ -114,7 +118,7 @@ public class SpecialNetherite implements ModInitializer {
 
 		@Override
 		public float getMiningSpeedMultiplier() {
-			return 1.6f;
+			return 6f;
 		}
 
 		@Override
@@ -154,11 +158,11 @@ public class SpecialNetherite implements ModInitializer {
 		}
 
 	}
-	public static ToolItem STRONG_NETHERITE_SWORD = new SwordItem(StrongNetherite.INSTANCE, -7, -3.4f, new Item.Settings().group(TOOLS));
-	public static ToolItem STRONG_NETHERITE_PICKAXE = new StrongNetherite.StrongPickaxe(StrongNetherite.INSTANCE, -11,-2.8f, new Item.Settings().group(TOOLS));
-	public static ToolItem STRONG_NETHERITE_AXE = new StrongNetherite.StrongAxe(StrongNetherite.INSTANCE, -7, -2, new Item.Settings().group(TOOLS));
-	public static ToolItem STRONG_NETHERITE_SHOVEL = new ShovelItem(StrongNetherite.INSTANCE, -7.5f, 0, new Item.Settings().group(TOOLS));
-	public static ToolItem STRONG_NETHERITE_HOE = new StrongNetherite.StrongHoe(StrongNetherite.INSTANCE, -16, 0, new Item.Settings().group(TOOLS));
+	public static ToolItem STRONG_NETHERITE_SWORD = new SwordItem(StrongNetherite.INSTANCE, -7, -3.4f, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem STRONG_NETHERITE_PICKAXE = new StrongNetherite.StrongPickaxe(StrongNetherite.INSTANCE, -11,-2.8f, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem STRONG_NETHERITE_AXE = new StrongNetherite.StrongAxe(StrongNetherite.INSTANCE, -7, -2, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem STRONG_NETHERITE_SHOVEL = new ShovelItem(StrongNetherite.INSTANCE, -7.5f, 0, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem STRONG_NETHERITE_HOE = new StrongNetherite.StrongHoe(StrongNetherite.INSTANCE, -16, 0, new Item.Settings().group(TOOLS).fireproof());
 	//Enchanted Tools
 	static class EnchantedNetherite implements ToolMaterial {
 		public static final SharpNetherite INSTANCE = new SharpNetherite();
@@ -170,7 +174,7 @@ public class SpecialNetherite implements ModInitializer {
 
 		@Override
 		public float getMiningSpeedMultiplier() {
-			return 1.6f;
+			return 6f;
 		}
 
 		@Override
@@ -210,11 +214,11 @@ public class SpecialNetherite implements ModInitializer {
 		}
 
 	}
-	public static ToolItem ENCHANTED_NETHERITE_SWORD = new SwordItem(EnchantedNetherite.INSTANCE, -9, -2.4f, new Item.Settings().group(TOOLS));
-	public static ToolItem ENCHANTED_NETHERITE_PICKAXE = new EnchantedNetherite.EnchantedPickaxe(EnchantedNetherite.INSTANCE, -11,-2.8f, new Item.Settings().group(TOOLS));
-	public static ToolItem ENCHANTED_NETHERITE_AXE = new EnchantedNetherite.EnchantedAxe(EnchantedNetherite.INSTANCE, -7, -3, new Item.Settings().group(TOOLS));
-	public static ToolItem ENCHANTED_NETHERITE_SHOVEL = new ShovelItem(EnchantedNetherite.INSTANCE, -10.5f, -3, new Item.Settings().group(TOOLS));
-	public static ToolItem ENCHANTED_NETHERITE_HOE = new EnchantedNetherite.EnchantedHoe(EnchantedNetherite.INSTANCE, -16, 0, new Item.Settings().group(TOOLS));
+	public static ToolItem ENCHANTED_NETHERITE_SWORD = new SwordItem(EnchantedNetherite.INSTANCE, -9, -2.4f, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem ENCHANTED_NETHERITE_PICKAXE = new EnchantedNetherite.EnchantedPickaxe(EnchantedNetherite.INSTANCE, -11,-2.8f, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem ENCHANTED_NETHERITE_AXE = new EnchantedNetherite.EnchantedAxe(EnchantedNetherite.INSTANCE, -7, -3, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem ENCHANTED_NETHERITE_SHOVEL = new ShovelItem(EnchantedNetherite.INSTANCE, -10.5f, -3, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem ENCHANTED_NETHERITE_HOE = new EnchantedNetherite.EnchantedHoe(EnchantedNetherite.INSTANCE, -16, 0, new Item.Settings().group(TOOLS).fireproof());
 
 
 	private static ConfiguredFeature<?, ?> ENCHANTED_CRYSTAL_OVERWORLD = Feature.ORE
@@ -244,11 +248,22 @@ public class SpecialNetherite implements ModInitializer {
 					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(13))))
 			.spreadHorizontally()
 			.repeat(5);
+	private static ConfiguredFeature<?, ?> TIN_OVERWORLD = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+					TIN_ORE.getDefaultState(),
+					8))
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(70))))
+			.spreadHorizontally()
+			.repeat(10);
 
 
 
 	public static final Item RAW_TIN = new Item(new FabricItemSettings().group(ORES));
 	public static final Item TIN_INGOT = new Item(new FabricItemSettings().group(ORES));
+	public static final Item RAW_BRONZE = new Item(new FabricItemSettings().group(ORES));
+	public static final Item BRONZE_INGOT = new Item(new FabricItemSettings().group(ORES));
 
 	public static final Item CEREAL = new Item(new FabricItemSettings().group(ItemGroup.MISC));
 
@@ -270,6 +285,11 @@ public class SpecialNetherite implements ModInitializer {
 				new Identifier("specialnetherite", "enchanted_crystal_overworld"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, enchantedCrystalOverworld.getValue(), ENCHANTED_CRYSTAL_OVERWORLD);
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, enchantedCrystalOverworld);
+
+		RegistryKey<ConfiguredFeature<?, ?>> tinOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("specialnetherite", "tin_overworld"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, tinOverworld.getValue(), TIN_OVERWORLD);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, tinOverworld);
 
 
 
@@ -294,6 +314,8 @@ public class SpecialNetherite implements ModInitializer {
 		//Register the ores that aren't crystals, and their raw/ingot varients
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "raw_tin"), RAW_TIN);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "tin_ingot"), TIN_INGOT);
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "raw_bronze"), RAW_BRONZE);
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "bronze_ingot"), BRONZE_INGOT);
 
 		//Register the sharp crystals
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "sharp_crystal"), SHARP_CRYSTAL);
