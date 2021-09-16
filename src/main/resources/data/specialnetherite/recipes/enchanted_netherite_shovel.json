@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing",
         "base": {
-            "item": "minecraft:netherite_shgvel"
+            "item": "minecraft:netherite_shovel"
             },
         "addition": {
             "item": "specialnetherite:enchanted_crystal"

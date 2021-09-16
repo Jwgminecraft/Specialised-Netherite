@@ -32,20 +32,20 @@ public class SpecialNetherite implements ModInitializer {
 	public static final Item CRYSTALS_ICON = new Item(new FabricItemSettings());
 	public static final Item TOOLS_ICON = new Item(new FabricItemSettings());
 	public static final Item ORES_ICON = new Item(new FabricItemSettings());
-
+	public static final Block ENCHANTABILITY_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
 
 	public static final ItemGroup CRYSTALS = FabricItemGroupBuilder.build(
 			new Identifier("specialnetherite", "crystals"),
 			() -> new ItemStack(CRYSTALS_ICON));
 	public static final ItemGroup ORES = FabricItemGroupBuilder.build(
 			new Identifier("specialnetherite", "ores"),
-			() -> new ItemStack(ORES_ICON));
+			() -> new ItemStack(ENCHANTABILITY_CRYSTAL_ORE));
 	public static final ItemGroup TOOLS = FabricItemGroupBuilder.create(
 					new Identifier("specialnetherite", "tools"))
 			.icon(() -> new ItemStack(TOOLS_ICON))
 			.build();
 
-	public static final Block ENCHANTABILITY_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
+
 	public static final Block SHARP_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
 	public static final Block STRONG_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
 	public static final Block TIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());

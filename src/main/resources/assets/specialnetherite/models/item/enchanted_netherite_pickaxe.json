@@ -1,4 +1,4 @@
-{{
+{
   "parent": "minecraft:item/handheld",
   "textures": {
     "layer0": "specialnetherite:item/enchanted_netherite_pickaxe"
