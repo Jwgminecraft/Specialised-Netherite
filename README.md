@@ -6,4 +6,4 @@ The process is irreversible and the choice you make will change how you use your
 
 # About Me
 
-This mod is made by me only, it's very slow progress, so if you want to see prerelease versions, subscribe to my patreon! It helps me out alot and gives me motivation for this project
+This mod is made by me only, except some translations and textures by the community, so it's very slow progress, so if you want to see prerelease versions, subscribe to my patreon! It helps me out alot and gives me motivation for this project
