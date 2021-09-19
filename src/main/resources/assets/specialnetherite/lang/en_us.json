@@ -37,6 +37,15 @@
 	"item.specialnetherite.sharp_crystal_shard": "Sharp Crystal Shard",
 	"block.specialnetherite.sharp_crystal_ore": "Sharp Crystal Ore",
 
+	"item.specialnetherite.nether_crystal": "Nether Crystal",
+	"item.specialnetherite.nether_crystal_shard": "Nether Crystal Shard",
+	"block.specialnetherite.nether_crystal_ore": "Nether Crystal Ore",
+	"item.specialnetherite.end_crystal": "End Crystal",
+	"item.specialnetherite.end_crystal_shard": "End Crystal Shard",
+	"block.specialnetherite.end_crystal_ore": "End Crystal Ore",
+
+	"item.specialnetherite.cereal": "Cereal",
+
 	"item.specialnetherite.knockback_resistance_crystal": "Knockback Resistance Crystal Shard",
 	"item.specialnetherite.knockback_resistance_crystal_shard": "Knockback Resistance Crystal Shard",
 	"block.specialnetherite.knockback_resistance_crystal_ore": "Knockback Resistance Crystal Ore",

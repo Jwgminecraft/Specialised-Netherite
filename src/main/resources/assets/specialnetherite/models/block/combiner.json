@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "specialnetherite:block/combiner_top",
+    "side": "specialnetherite:block/combiner_side"
+  }
+}

@@ -2,7 +2,7 @@
 	"item.specialnetherite.defence_crystal": "Defence Crystal",
 	"item.specialnetherite.defence_crystal_shard": "Defence Crystal Shard",
 	"block.specialnetherite.defence_crystal_ore": "Defence Crystal Ore",
-	
+
 	"item.specialnetherite.strong_netherite_sword": "Strong Netherite Sword",
 	"item.specialnetherite.strong_netherite_pickaxe": "Strong Netherite Pickaxe",
 	"item.specialnetherite.strong_netherite_axe": "Strong Netherite Axe",
@@ -16,31 +16,40 @@
 	"item.specialnetherite.tin_ingot": "Tin Ingot",
 	"item.specialnetherite.raw_bronze": "Raw Bronze",
 	"item.specialnetherite.bronze_ingot": "Bronze Ingot",
-	
+
 	"item.specialnetherite.enchanted_netherite_sword": "Enchanted Netherite Sword",
 	"item.specialnetherite.enchanted_netherite_pickaxe": "Enchanted Netherite Pickaxe",
 	"item.specialnetherite.enchanted_netherite_axe": "Enchanted Netherite Axe",
 	"item.specialnetherite.enchanted_netherite_shovel": "Enchanted Netherite Shovel",
-	"item.specialnetherite.enchanted_netherite_hoe": "Enchanted Netherite Hoe",	
-	
+	"item.specialnetherite.enchanted_netherite_hoe": "Enchanted Netherite Hoe",
+
 	"item.specialnetherite.strong_crystal_shard": "Strong Crystal Shard",
 	"item.specialnetherite.strong_crystal": "Strong Crystal",
 	"block.specialnetherite.strong_crystal_ore": "Strong Crystal Ore",
-	
+
 	"item.specialnetherite.enchanted_crystal": "Enchanted Crystal",
 	"item.specialnetherite.enchanted_crystal_shard": "Enchanted Crystal Shard",
-	"block.specialnetherite.enchanted_crystal_ore": "Enchanted Crystal Ore",	
+	"block.specialnetherite.enchanted_crystal_ore": "Enchanted Crystal Ore",
 
 	"item.specialnetherite.sharp_netherite_axe": "Sharpened Netherite Axe",
-	"item.specialnetherite.sharp_netherite_sword": "Sharpened Netherite Sword",	
+	"item.specialnetherite.sharp_netherite_sword": "Sharpened Netherite Sword",
 	"item.specialnetherite.sharp_crystal": "Sharp Crystal",
 	"item.specialnetherite.sharp_crystal_shard": "Sharp Crystal Shard",
-	"block.specialnetherite.sharp_crystal_ore": "Sharp Crystal Ore",	
-	
+	"block.specialnetherite.sharp_crystal_ore": "Sharp Crystal Ore",
+
+	"item.specialnetherite.nether_crystal": "Nether Crystal",
+	"item.specialnetherite.nether_crystal_shard": "Nether Crystal Shard",
+	"block.specialnetherite.nether_crystal_ore": "Nether Crystal Ore",
+	"item.specialnetherite.end_crystal": "End Crystal",
+	"item.specialnetherite.end_crystal_shard": "End Crystal Shard",
+	"block.specialnetherite.end_crystal_ore": "End Crystal Ore",
+
+	"item.specialnetherite.cereal": "Cereal",
+
 	"item.specialnetherite.knockback_resistance_crystal": "Knockback Resistance Crystal Shard",
 	"item.specialnetherite.knockback_resistance_crystal_shard": "Knockback Resistance Crystal Shard",
 	"block.specialnetherite.knockback_resistance_crystal_ore": "Knockback Resistance Crystal Ore",
-	
+
 	"itemGroup.specialnetherite.crystals": "Crystals",
 	"itemGroup.specialnetherite.tools": "Tools",
 	"itemGroup.specialnetherite.ores": "Ores"

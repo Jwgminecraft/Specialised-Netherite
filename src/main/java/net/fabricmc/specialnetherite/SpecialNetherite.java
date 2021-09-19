@@ -8,9 +8,12 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.client.render.SkyProperties;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -25,13 +28,29 @@ import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 
 
 
+
+
+
 public class SpecialNetherite implements ModInitializer {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 	public static final Item CRYSTALS_ICON = new Item(new FabricItemSettings());
 	public static final Item TOOLS_ICON = new Item(new FabricItemSettings());
-	public static final Item ORES_ICON = new Item(new FabricItemSettings());
 	public static final Block ENCHANTABILITY_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
 
 	public static final ItemGroup CRYSTALS = FabricItemGroupBuilder.build(
@@ -48,10 +67,9 @@ public class SpecialNetherite implements ModInitializer {
 
 	public static final Block SHARP_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
 	public static final Block STRONG_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
-	public static final Block TIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
-	public static final Block TIN_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
+	public static final Block TIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
+	public static final Block TIN_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(1f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
 	public static final Block BRONZE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
-
 	//Add the strong crystals
 	public static final Item STRONG_CRYSTAL = new Item(new FabricItemSettings().group(CRYSTALS));
 	public static final Item STRONG_CRYSTAL_SHARD = new Item(new FabricItemSettings().group(CRYSTALS));
@@ -226,6 +244,7 @@ public class SpecialNetherite implements ModInitializer {
 	public static ToolItem ENCHANTED_NETHERITE_HOE = new EnchantedNetherite.EnchantedHoe(EnchantedNetherite.INSTANCE, -16, 0, new Item.Settings().group(TOOLS).fireproof());
 
 
+
 	private static ConfiguredFeature<?, ?> ENCHANTED_CRYSTAL_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
@@ -265,6 +284,39 @@ public class SpecialNetherite implements ModInitializer {
 
 
 
+
+
+	public static final Block NETHER_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
+	public static final Block END_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
+
+	public static final Item END_CRYSTAL = new Item(new FabricItemSettings().group(CRYSTALS));
+	public static final Item END_CRYSTAL_SHARD = new Item(new FabricItemSettings().group(CRYSTALS));
+
+	public static final Item NETHER_CRYSTAL = new Item(new FabricItemSettings().group(CRYSTALS));
+	public static final Item NETHER_CRYSTAL_SHARD = new Item(new FabricItemSettings().group(CRYSTALS));
+
+
+
+	private static ConfiguredFeature<?, ?> NETHER_CRYSTAL_GEN = Feature.ORE
+			.configure(new OreFeatureConfig(
+					new BlockMatchRuleTest(Blocks.NETHERRACK),
+					NETHER_CRYSTAL_ORE.getDefaultState(),
+					3))
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.fixed(0), YOffset.fixed(64))))
+			.spreadHorizontally()
+			.repeat(5);
+	private static ConfiguredFeature<?, ?> END_CRYSTAL_GEN = Feature.ORE
+			.configure(new OreFeatureConfig(
+					new BlockMatchRuleTest(Blocks.END_STONE),
+					END_CRYSTAL_ORE.getDefaultState(),
+					3))
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.fixed(0), YOffset.fixed(64))))
+			.spreadHorizontally()
+			.repeat(5);
+
+
 	public static final Item RAW_TIN = new Item(new FabricItemSettings().group(ORES));
 	public static final Item TIN_INGOT = new Item(new FabricItemSettings().group(ORES));
 	public static final Item RAW_BRONZE = new Item(new FabricItemSettings().group(ORES));
@@ -296,6 +348,16 @@ public class SpecialNetherite implements ModInitializer {
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, tinOverworld.getValue(), TIN_OVERWORLD);
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, tinOverworld);
 
+
+		RegistryKey<ConfiguredFeature<?, ?>> endCrystalOre = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("specialnetherite", "end_crystal_gen"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, endCrystalOre.getValue(), END_CRYSTAL_GEN);
+		BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, endCrystalOre);
+
+		RegistryKey<ConfiguredFeature<?, ?>> netherCrystalOre = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("specialnetherite", "nether_crystal_gen"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, netherCrystalOre.getValue(), NETHER_CRYSTAL_GEN);
+		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, netherCrystalOre);
 
 
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "icon1"), TOOLS_ICON);
@@ -337,16 +399,24 @@ public class SpecialNetherite implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "enchanted_crystal_shard"), ENCHANTABILITY_CRYSTAL_SHARD);
 		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "enchanted_crystal_ore"), ENCHANTABILITY_CRYSTAL_ORE);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "enchanted_crystal_ore"), new BlockItem(ENCHANTABILITY_CRYSTAL_ORE, new FabricItemSettings().group(ORES)));
-
+		//Register tin and bronze
 		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "tin_ore"), TIN_ORE);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "tin_ore"), new BlockItem(TIN_ORE, new FabricItemSettings().group(ORES)));
-
-
 		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "tin_block"), TIN_BLOCK);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "tin_block"), new BlockItem(TIN_BLOCK, new FabricItemSettings().group(ORES)));
-
 		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "bronze_block"), BRONZE_BLOCK);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "bronze_block"), new BlockItem(BRONZE_BLOCK, new FabricItemSettings().group(ORES)));
+
+		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "nether_crystal_ore"), NETHER_CRYSTAL_ORE);
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "nether_crystal_ore"), new BlockItem(NETHER_CRYSTAL_ORE, new FabricItemSettings().group(ORES)));
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "nether_crystal"), NETHER_CRYSTAL);
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "nether_crystal_shard"), NETHER_CRYSTAL_SHARD);
+
+		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "end_crystal_ore"), END_CRYSTAL_ORE);
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "end_crystal_ore"), new BlockItem(END_CRYSTAL_ORE, new FabricItemSettings().group(ORES)));
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "end_crystal"), END_CRYSTAL);
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "end_crystal_shard"), END_CRYSTAL_SHARD);
+
 	}
 
 }
