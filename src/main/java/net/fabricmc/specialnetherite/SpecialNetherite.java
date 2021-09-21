@@ -51,22 +51,27 @@ public class SpecialNetherite implements ModInitializer {
 
 	public static final Item CRYSTALS_ICON = new Item(new FabricItemSettings());
 	public static final Item TOOLS_ICON = new Item(new FabricItemSettings());
-	public static final Block ENCHANTABILITY_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
+
 
 	public static final ItemGroup CRYSTALS = FabricItemGroupBuilder.build(
 			new Identifier("specialnetherite", "crystals"),
 			() -> new ItemStack(CRYSTALS_ICON));
 	public static final ItemGroup ORES = FabricItemGroupBuilder.build(
 			new Identifier("specialnetherite", "ores"),
-			() -> new ItemStack(ENCHANTABILITY_CRYSTAL_ORE));
+			() -> new ItemStack(Blocks.GOLD_ORE));
 	public static final ItemGroup TOOLS = FabricItemGroupBuilder.create(
 					new Identifier("specialnetherite", "tools"))
 			.icon(() -> new ItemStack(TOOLS_ICON))
 			.build();
 
-
 	public static final Block SHARP_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
 	public static final Block STRONG_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
+	public static final Block ENCHANTABILITY_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
+
+	public static final Block DEEPSLATE_SHARP_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
+	public static final Block DEEPSLATE_STRONG_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
+	public static final Block DEEPSLATE_ENCHANTABILITY_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool());
+
 	public static final Block TIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
 	public static final Block TIN_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(1f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
 	public static final Block BRONZE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
@@ -389,16 +394,22 @@ public class SpecialNetherite implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "sharp_crystal_shard"), SHARP_CRYSTAL_SHARD);
 		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "sharp_crystal_ore"), SHARP_CRYSTAL_ORE);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "sharp_crystal_ore"), new BlockItem(SHARP_CRYSTAL_ORE, new FabricItemSettings().group(ORES)));
+		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "deepslate_sharp_crystal_ore"), DEEPSLATE_SHARP_CRYSTAL_ORE);
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "deepslate_sharp_crystal_ore"), new BlockItem(DEEPSLATE_SHARP_CRYSTAL_ORE, new FabricItemSettings().group(ORES)));
 		//Register the strong crystal
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "strong_crystal"), STRONG_CRYSTAL);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "strong_crystal_shard"), STRONG_CRYSTAL_SHARD);
 		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "strong_crystal_ore"), STRONG_CRYSTAL_ORE);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "strong_crystal_ore"), new BlockItem(STRONG_CRYSTAL_ORE, new FabricItemSettings().group(ORES)));
+		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "deepslate_strong_crystal_ore"), DEEPSLATE_STRONG_CRYSTAL_ORE);
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "deepslate_strong_crystal_ore"), new BlockItem(DEEPSLATE_STRONG_CRYSTAL_ORE, new FabricItemSettings().group(ORES)));
      	//Register the enchantability crystal
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "enchanted_crystal"), ENCHANTABILITY_CRYSTAL);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "enchanted_crystal_shard"), ENCHANTABILITY_CRYSTAL_SHARD);
 		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "enchanted_crystal_ore"), ENCHANTABILITY_CRYSTAL_ORE);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "enchanted_crystal_ore"), new BlockItem(ENCHANTABILITY_CRYSTAL_ORE, new FabricItemSettings().group(ORES)));
+		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "deepslate_enchanted_crystal_ore"), DEEPSLATE_ENCHANTABILITY_CRYSTAL_ORE);
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "deepslate_enchanted_crystal_ore"), new BlockItem(DEEPSLATE_ENCHANTABILITY_CRYSTAL_ORE, new FabricItemSettings().group(ORES)));
 		//Register tin and bronze
 		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "tin_ore"), TIN_ORE);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "tin_ore"), new BlockItem(TIN_ORE, new FabricItemSettings().group(ORES)));
