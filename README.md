@@ -17,3 +17,15 @@ You can see all of them here:
 WIKI: https://github.com/JWGardiner/Specialised-Netherite/wiki
 
 DOWNLOAD: https://github.com/JWGardiner/Specialised-Netherite/releases
+
+# How do I know where its safe to download?
+
+It's safe to download if it's on these sites, and these only:
+
+Modrinth
+
+Curseforge
+
+jwgminecraft.net
+
+Anywhere else is unsafe and I'm not liable for any issues bugs or viruses if it's not from the official downloads.
