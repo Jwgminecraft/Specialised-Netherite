@@ -14,6 +14,6 @@ Also, it's worth noting, I don't mind people messaging me and saying hi/giving i
 
 You can see all of them here:
 
-WIKI:
+WIKI: https://github.com/JWGardiner/Specialised-Netherite/wiki
 
-DOWNLOAD
+DOWNLOAD:
