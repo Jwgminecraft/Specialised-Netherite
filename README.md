@@ -16,4 +16,4 @@ You can see all of them here:
 
 WIKI: https://github.com/JWGardiner/Specialised-Netherite/wiki
 
-DOWNLOAD:
+DOWNLOAD: https://github.com/JWGardiner/Specialised-Netherite/releases
