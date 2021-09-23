@@ -256,7 +256,7 @@ public class SpecialNetherite implements ModInitializer {
 					ENCHANTABILITY_CRYSTAL_ORE.getDefaultState(),
 					3))
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(13))))
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64))))
 			.spreadHorizontally()
 			.repeat(5);
 	private static ConfiguredFeature<?, ?> STRONG_CRYSTAL_OVERWORLD = Feature.ORE
@@ -265,7 +265,7 @@ public class SpecialNetherite implements ModInitializer {
 					STRONG_CRYSTAL_ORE.getDefaultState(),
 					3))
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(13))))
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64))))
 			.spreadHorizontally()
 			.repeat(5);
 	private static ConfiguredFeature<?, ?> SHARP_CRYSTAL_OVERWORLD = Feature.ORE
@@ -274,7 +274,7 @@ public class SpecialNetherite implements ModInitializer {
 					SHARP_CRYSTAL_ORE.getDefaultState(),
 					3))
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(13))))
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64))))
 			.spreadHorizontally()
 			.repeat(5);
 	private static ConfiguredFeature<?, ?> TIN_OVERWORLD = Feature.ORE
@@ -286,6 +286,42 @@ public class SpecialNetherite implements ModInitializer {
 					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(70))))
 			.spreadHorizontally()
 			.repeat(10);
+
+
+
+
+	private static ConfiguredFeature<?, ?> ENCHANTED_CRYSTAL_DEEPSLATE = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES,
+					DEEPSLATE_ENCHANTABILITY_CRYSTAL_ORE.getDefaultState(),
+					3))
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64))))
+			.spreadHorizontally()
+			.repeat(50);
+	private static ConfiguredFeature<?, ?> STRONG_CRYSTAL_DEEPSLATE = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES,
+					DEEPSLATE_STRONG_CRYSTAL_ORE.getDefaultState(),
+					3))
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64))))
+			.spreadHorizontally()
+			.repeat(50);
+	private static ConfiguredFeature<?, ?> SHARP_CRYSTAL_DEEPSLATE = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES,
+					DEEPSLATE_SHARP_CRYSTAL_ORE.getDefaultState(),
+					3))
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64))))
+			.spreadHorizontally()
+			.repeat(50);
+
+
+
+
+
 
 
 
@@ -308,18 +344,18 @@ public class SpecialNetherite implements ModInitializer {
 					NETHER_CRYSTAL_ORE.getDefaultState(),
 					3))
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.fixed(0), YOffset.fixed(64))))
+					UniformHeightProvider.create(YOffset.fixed(0), YOffset.fixed(128))))
 			.spreadHorizontally()
-			.repeat(5);
+			.repeat(15);
 	private static ConfiguredFeature<?, ?> END_CRYSTAL_GEN = Feature.ORE
 			.configure(new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.END_STONE),
 					END_CRYSTAL_ORE.getDefaultState(),
 					3))
 			.range(new RangeDecoratorConfig(
-					UniformHeightProvider.create(YOffset.fixed(0), YOffset.fixed(64))))
+					UniformHeightProvider.create(YOffset.fixed(0), YOffset.fixed(128))))
 			.spreadHorizontally()
-			.repeat(5);
+			.repeat(15);
 
 
 	public static final Item RAW_TIN = new Item(new FabricItemSettings().group(ORES));
@@ -364,6 +400,24 @@ public class SpecialNetherite implements ModInitializer {
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, netherCrystalOre.getValue(), NETHER_CRYSTAL_GEN);
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, netherCrystalOre);
 
+
+
+
+
+		RegistryKey<ConfiguredFeature<?, ?>> sharpCrystalDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("specialnetherite", "deepslate_sharp_crystal_overworld"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, sharpCrystalDeepslate.getValue(), SHARP_CRYSTAL_DEEPSLATE);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, sharpCrystalOverworld);
+
+		RegistryKey<ConfiguredFeature<?, ?>> strongCrystalDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("specialnetherite", "deepslate_strong_crystal_overworld"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, strongCrystalDeepslate.getValue(), STRONG_CRYSTAL_DEEPSLATE);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, strongCrystalDeepslate);
+
+		RegistryKey<ConfiguredFeature<?, ?>> enchantedCrystalDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("specialnetherite", "deepslate_enchanted_crystal_overworld"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, enchantedCrystalDeepslate.getValue(), ENCHANTED_CRYSTAL_DEEPSLATE);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, enchantedCrystalOverworld);
 
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "icon1"), TOOLS_ICON);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "icon2"), CRYSTALS_ICON);
