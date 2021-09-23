@@ -363,7 +363,6 @@ public class SpecialNetherite implements ModInitializer {
 	public static final Item RAW_BRONZE = new Item(new FabricItemSettings().group(ORES));
 	public static final Item BRONZE_INGOT = new Item(new FabricItemSettings().group(ORES));
 
-	public static final Item CEREAL = new Item(new FabricItemSettings().group(ItemGroup.MISC));
 
 	@Override
 	public void onInitialize() {
@@ -422,7 +421,6 @@ public class SpecialNetherite implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "icon1"), TOOLS_ICON);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "icon2"), CRYSTALS_ICON);
 
-		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "cereal"), CEREAL);
 		//Register the tools
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "sharp_netherite_sword"), SHARP_NETHERITE_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "sharp_netherite_axe"), SHARP_NETHERITE_AXE);
