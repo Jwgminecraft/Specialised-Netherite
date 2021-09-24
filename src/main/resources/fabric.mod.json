@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
-  "version": "V0.1",
+  "id": "specialnetherite",
+  "version": "V0.3",
 
   "name": "Specialised Netherite",
   "description": "This mod adds some specialised netherite tools, to add new tiers and difficult choices into the game!",
@@ -13,7 +13,7 @@
     "sources": "https://github.com/JWGardiner/Specialised-Netherite"
   },
 
-  "license": "Custom",
+  "license": "All Rights Reserved",
   "icon": "assets/icon.png",
 
   "environment": "*",
