@@ -10,7 +10,6 @@ import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
-import net.minecraft.client.render.SkyProperties;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
@@ -249,7 +248,6 @@ public class SpecialNetherite implements ModInitializer {
 	public static ToolItem ENCHANTED_NETHERITE_HOE = new EnchantedNetherite.EnchantedHoe(EnchantedNetherite.INSTANCE, -16, 0, new Item.Settings().group(TOOLS).fireproof());
 
 
-
 	private static ConfiguredFeature<?, ?> ENCHANTED_CRYSTAL_OVERWORLD = Feature.ORE
 			.configure(new OreFeatureConfig(
 					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
@@ -336,7 +334,8 @@ public class SpecialNetherite implements ModInitializer {
 	public static final Item NETHER_CRYSTAL = new Item(new FabricItemSettings().group(CRYSTALS));
 	public static final Item NETHER_CRYSTAL_SHARD = new Item(new FabricItemSettings().group(CRYSTALS));
 
-
+	public static final Item OVERWORLD_CRYSTAL = new Item(new FabricItemSettings().group(CRYSTALS));
+	public static final Item OVERWORLD_CRYSTAL_SHARD = new Item(new FabricItemSettings().group(CRYSTALS));
 
 	private static ConfiguredFeature<?, ?> NETHER_CRYSTAL_GEN = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -400,13 +399,10 @@ public class SpecialNetherite implements ModInitializer {
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, netherCrystalOre);
 
 
-
-
-
 		RegistryKey<ConfiguredFeature<?, ?>> sharpCrystalDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("specialnetherite", "deepslate_sharp_crystal_overworld"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, sharpCrystalDeepslate.getValue(), SHARP_CRYSTAL_DEEPSLATE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, sharpCrystalOverworld);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, sharpCrystalDeepslate);
 
 		RegistryKey<ConfiguredFeature<?, ?>> strongCrystalDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("specialnetherite", "deepslate_strong_crystal_overworld"));
@@ -416,7 +412,9 @@ public class SpecialNetherite implements ModInitializer {
 		RegistryKey<ConfiguredFeature<?, ?>> enchantedCrystalDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("specialnetherite", "deepslate_enchanted_crystal_overworld"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, enchantedCrystalDeepslate.getValue(), ENCHANTED_CRYSTAL_DEEPSLATE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, enchantedCrystalOverworld);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, enchantedCrystalDeepslate);
+
+
 
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "icon1"), TOOLS_ICON);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "icon2"), CRYSTALS_ICON);
@@ -469,17 +467,17 @@ public class SpecialNetherite implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "tin_block"), new BlockItem(TIN_BLOCK, new FabricItemSettings().group(ORES)));
 		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "bronze_block"), BRONZE_BLOCK);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "bronze_block"), new BlockItem(BRONZE_BLOCK, new FabricItemSettings().group(ORES)));
-
+		//Crystals for each dimension
 		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "nether_crystal_ore"), NETHER_CRYSTAL_ORE);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "nether_crystal_ore"), new BlockItem(NETHER_CRYSTAL_ORE, new FabricItemSettings().group(ORES)));
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "nether_crystal"), NETHER_CRYSTAL);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "nether_crystal_shard"), NETHER_CRYSTAL_SHARD);
-
 		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "end_crystal_ore"), END_CRYSTAL_ORE);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "end_crystal_ore"), new BlockItem(END_CRYSTAL_ORE, new FabricItemSettings().group(ORES)));
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "end_crystal"), END_CRYSTAL);
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "end_crystal_shard"), END_CRYSTAL_SHARD);
-
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "overworld_crystal"), OVERWORLD_CRYSTAL);
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "overworld_crystal_shard"), OVERWORLD_CRYSTAL_SHARD);
 	}
 
 }
