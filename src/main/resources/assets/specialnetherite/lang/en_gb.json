@@ -45,5 +45,6 @@
 	"block.specialnetherite.knockback_resistance_crystal_ore": "Knockback Resistance Crystal Ore",
 	"itemGroup.specialnetherite.crystals": "Crystals",
 	"itemGroup.specialnetherite.tools": "Tools",
-	"itemGroup.specialnetherite.ores": "Ores"
+	"itemGroup.specialnetherite.ores": "Ores",
+	"biome.specialnetherite.crystal_biome": "Crystal Biome"
 }
