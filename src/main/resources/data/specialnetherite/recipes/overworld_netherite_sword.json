@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+        "base": {
+            "item": "minecraft:netherite_axe"
+            },
+        "addition": {
+            "item": "specialnetherite:overworld_crystal"
+            },
+  "result": {
+    "item": "specialnetherite:overworld_netherite_sword",
+    "count": 1
+  }
+}

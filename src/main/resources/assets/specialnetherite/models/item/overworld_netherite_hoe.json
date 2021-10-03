@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "specialnetherite:item/overworld_netherite_hoe"
+  }
+}

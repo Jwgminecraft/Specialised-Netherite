@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+     "ingredients": [
+        {
+            "item": "specialnetherite:overworld_crystal_shard"
+        },
+		    {
+            "item": "specialnetherite:overworld_crystal_shard"
+        },
+		    {
+            "item": "specialnetherite:overworld_crystal_shard"
+        },
+			{
+            "item": "specialnetherite:overworld_crystal_shard"
+        }
+    ],
+  "result": {
+    "item": "specialnetherite:overworld_crystal",
+    "count": 1
+  }
+}

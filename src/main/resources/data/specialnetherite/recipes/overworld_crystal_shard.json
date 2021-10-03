@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+     "ingredients": [
+        {
+            "item": "specialnetherite:bronze_block"
+        },
+		    {
+            "item": "specialnetherite:strong_crystal"
+        },
+		    {
+            "item": "specialnetherite:sharp_crystal"
+        },
+			{
+            "item": "specialnetherite:enchanted_crystal"
+        }
+    ],
+  "result": {
+    "item": "specialnetherite:overworld_crystal_shard",
+    "count": 1
+  }
+}
