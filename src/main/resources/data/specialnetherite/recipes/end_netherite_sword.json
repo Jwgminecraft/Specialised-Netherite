@@ -4,10 +4,10 @@
             "item": "minecraft:netherite_sword"
             },
         "addition": {
-            "item": "specialnetherite:overworld_crystal"
+            "item": "specialnetherite:end_crystal"
             },
   "result": {
-    "item": "specialnetherite:overworld_netherite_sword",
+    "item": "specialnetherite:end_netherite_sword",
     "count": 1
   }
 }

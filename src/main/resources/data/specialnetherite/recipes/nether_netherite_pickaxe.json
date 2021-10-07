@@ -4,10 +4,10 @@
             "item": "minecraft:netherite_pickaxe"
             },
         "addition": {
-            "item": "specialnetherite:overworld_crystal"
+            "item": "specialnetherite:nether_crystal"
             },
   "result": {
-    "item": "specialnetherite:overworld_netherite_pickaxe",
+    "item": "specialnetherite:nether_netherite_pickaxe",
     "count": 1
   }
 }

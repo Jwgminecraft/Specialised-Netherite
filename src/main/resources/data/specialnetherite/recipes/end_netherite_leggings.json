@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+        "base": {
+            "item": "minecraft:netherite_leggings"
+            },
+        "addition": {
+            "item": "specialnetherite:end_crystal"
+            },
+  "result": {
+    "item": "specialnetherite:end_netherite_leggings",
+    "count": 1
+  }
+}

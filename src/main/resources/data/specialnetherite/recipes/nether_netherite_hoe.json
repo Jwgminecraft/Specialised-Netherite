@@ -4,10 +4,10 @@
             "item": "minecraft:netherite_hoe"
             },
         "addition": {
-            "item": "specialnetherite:overworld_crystal"
+            "item": "specialnetherite:nether_crystal"
             },
   "result": {
-    "item": "specialnetherite:overworld_netherite_hoe",
+    "item": "specialnetherite:nether_netherite_hoe",
     "count": 1
   }
 }

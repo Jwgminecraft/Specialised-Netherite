@@ -4,10 +4,10 @@
             "item": "minecraft:netherite_shovel"
             },
         "addition": {
-            "item": "specialnetherite:overworld_crystal"
+            "item": "specialnetherite:end_crystal"
             },
   "result": {
-    "item": "specialnetherite:overworld_netherite_shovel",
+    "item": "specialnetherite:end_netherite_shovel",
     "count": 1
   }
 }

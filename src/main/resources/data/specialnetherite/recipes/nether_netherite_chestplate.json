@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+        "base": {
+            "item": "minecraft:netherite_chestplate"
+            },
+        "addition": {
+            "item": "specialnetherite:nether_crystal"
+            },
+  "result": {
+    "item": "specialnetherite:nether_netherite_chestplate",
+    "count": 1
+  }
+}

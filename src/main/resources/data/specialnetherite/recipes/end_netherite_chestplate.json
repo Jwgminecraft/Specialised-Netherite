@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+        "base": {
+            "item": "minecraft:netherite_chestplate"
+            },
+        "addition": {
+            "item": "specialnetherite:end_crystal"
+            },
+  "result": {
+    "item": "specialnetherite:end_netherite_chestplate",
+    "count": 1
+  }
+}
