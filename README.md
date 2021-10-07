@@ -16,7 +16,13 @@ You can see all of them here:
 
 WIKI: https://github.com/JWGardiner/Specialised-Netherite/wiki
 
-DOWNLOAD: https://github.com/JWGardiner/Specialised-Netherite/releases
+DOWNLOAD:
+
+
+https://modrinth.com/mod/special-netherite
+
+
+https://github.com/JWGardiner/Specialised-Netherite/releases
 
 # How do I know where its safe to download?
 
