@@ -24,6 +24,12 @@ https://modrinth.com/mod/special-netherite
 
 https://github.com/JWGardiner/Specialised-Netherite/releases
 
+
+https://jwgminecraft.github.io/mods/Specialised-Netherite
+
+
+https://www.curseforge.com/minecraft/mc-mods/specialised-netherite
+
 # How do I know where its safe to download?
 
 It's safe to download if it's on these sites, and these only:
