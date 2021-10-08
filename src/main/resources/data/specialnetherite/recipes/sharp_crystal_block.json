@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+     "ingredients": [  
+	        {
+            "item": "specialnetherite:sharp_crystal"
+        },
+		        {
+            "item": "specialnetherite:sharp_crystal"
+        },
+		        {
+            "item": "specialnetherite:sharp_crystal"
+        },
+        {
+            "item": "specialnetherite:sharp_crystal"
+        }
+    ],
+  "result": {
+    "item": "specialnetherite:sharp_crystal_block",
+    "count": 1
+  }
+}
+

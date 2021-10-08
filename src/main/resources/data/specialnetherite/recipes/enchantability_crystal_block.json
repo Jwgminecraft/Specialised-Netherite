@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+     "ingredients": [  
+	        {
+            "item": "specialnetherite:enchanted_crystal"
+        },
+		        {
+            "item": "specialnetherite:enchanted_crystal"
+        },
+		        {
+            "item": "specialnetherite:enchanted_crystal"
+        },
+        {
+            "item": "specialnetherite:enchanted_crystal"
+        }
+    ],
+  "result": {
+    "item": "specialnetherite:enchantability_crystal_block",
+    "count": 1
+  }
+}

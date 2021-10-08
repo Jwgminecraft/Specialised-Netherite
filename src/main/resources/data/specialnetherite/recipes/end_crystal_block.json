@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+     "ingredients": [  
+	        {
+            "item": "specialnetherite:end_crystal"
+        },
+		        {
+            "item": "specialnetherite:end_crystal"
+        },
+		        {
+            "item": "specialnetherite:end_crystal"
+        },
+        {
+            "item": "specialnetherite:end_crystal"
+        }
+    ],
+  "result": {
+    "item": "specialnetherite:end_crystal_block",
+    "count": 1
+  }
+}

@@ -73,5 +73,11 @@
 	"item.specialnetherite.end_netherite_helmet": "End Netherite Helmet",
 	"item.specialnetherite.end_netherite_chestplate": "End Netherite Chestplate",
 	"item.specialnetherite.end_netherite_leggings": "End Netherite Leggings",
-	"item.specialnetherite.end_netherite_boots": "End Netherite Boots"
+	"item.specialnetherite.end_netherite_boots": "End Netherite Boots",
+	"block.specialnetherite.enchantability_crystal_block": "Enchanted Crystal Block",
+	"block.specialnetherite.sharp_crystal_block": "Sharp Crystal Block",
+	"block.specialnetherite.strong_crystal_block": "Strong Crystal Block",
+	"block.specialnetherite.end_crystal_block": "End Crystal Block",
+	"block.specialnetherite.nether_crystal_block": "Nether Crystal Block",
+	"block.specialnetherite.overworld_crystal_block": "Overworld Crystal Block"
 }

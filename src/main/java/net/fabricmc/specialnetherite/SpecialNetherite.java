@@ -54,10 +54,10 @@ public class SpecialNetherite implements ModInitializer {
 					new Identifier("specialnetherite", "tools"))
 			.icon(() -> new ItemStack(TOOLS_ICON))
 			.build();
-
 	public static final Block SHARP_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(4f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).requiresTool());
 	public static final Block STRONG_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(4f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).requiresTool());
 	public static final Block ENCHANTABILITY_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(4f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).requiresTool());
+
 
 	public static final Block DEEPSLATE_SHARP_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(4f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).requiresTool());
 	public static final Block DEEPSLATE_STRONG_CRYSTAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(4f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).requiresTool());
@@ -135,7 +135,7 @@ public class SpecialNetherite implements ModInitializer {
 
 	}
 	public static class OverworldArmorMaterial implements ArmorMaterial {
-		private static final int[] BASE_DURABILITY = new int[] {15, 17, 18, 13};
+		private static final int[] BASE_DURABILITY = new int[] {55, 57, 58, 53};
 		private static final int[] PROTECTION_VALUES = new int[] {4, 7, 9, 3};
 
 		@Override
@@ -179,9 +179,9 @@ public class SpecialNetherite implements ModInitializer {
 			return 0;
 		}
 	}
-	public static ToolItem OVER_NETHERITE_SWORD = new SwordItem(OverworldNetherite.INSTANCE, 20, -3.4f, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem OVER_NETHERITE_SWORD = new SwordItem(OverworldNetherite.INSTANCE, 20, -5.4f, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem OVER_NETHERITE_PICKAXE = new OverworldNetherite.OverPickaxe(OverworldNetherite.INSTANCE, 10, -2.8f, new Item.Settings().group(TOOLS).fireproof());
-	public static ToolItem OVER_NETHERITE_AXE = new OverworldNetherite.OverAxe(OverworldNetherite.INSTANCE, 32, -2, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem OVER_NETHERITE_AXE = new OverworldNetherite.OverAxe(OverworldNetherite.INSTANCE, 32, 0, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem OVER_NETHERITE_SHOVEL = new ShovelItem(OverworldNetherite.INSTANCE, 10f, 0, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem OVER_NETHERITE_HOE = new OverworldNetherite.OverHoe(OverworldNetherite.INSTANCE, 1, 0, new Item.Settings().group(TOOLS).fireproof());
 	public static final ArmorMaterial OVERWORLD_ARMOR_MATERIAL = new OverworldArmorMaterial();
@@ -249,7 +249,7 @@ public class SpecialNetherite implements ModInitializer {
 
 	}
 	public static class NetherArmorMaterial implements ArmorMaterial {
-		private static final int[] BASE_DURABILITY = new int[] {15, 17, 18, 13};
+		private static final int[] BASE_DURABILITY = new int[] {55, 57, 58, 53};
 		private static final int[] PROTECTION_VALUES = new int[] {4, 7, 9, 3};
 
 		@Override
@@ -293,9 +293,9 @@ public class SpecialNetherite implements ModInitializer {
 			return 0;
 		}
 	}
-	public static ToolItem NETHER_NETHERITE_SWORD = new SwordItem(NetherNetherite.INSTANCE, 20, -3.4f, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem NETHER_NETHERITE_SWORD = new SwordItem(NetherNetherite.INSTANCE, 20, -5.4f, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem NETHER_NETHERITE_PICKAXE = new NetherNetherite.NetherPickaxe(NetherNetherite.INSTANCE, 10, -2.8f, new Item.Settings().group(TOOLS).fireproof());
-	public static ToolItem NETHER_NETHERITE_AXE = new NetherNetherite.NetherAxe(NetherNetherite.INSTANCE, 32, -2, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem NETHER_NETHERITE_AXE = new NetherNetherite.NetherAxe(NetherNetherite.INSTANCE, 32, 0, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem NETHER_NETHERITE_SHOVEL = new ShovelItem(NetherNetherite.INSTANCE, 10f, 0, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem NETHER_NETHERITE_HOE = new NetherNetherite.NetherHoe(NetherNetherite.INSTANCE, 1, 0, new Item.Settings().group(TOOLS).fireproof());
 	public static final ArmorMaterial NETHER_ARMOR_MATERIAL = new NetherArmorMaterial();
@@ -362,7 +362,7 @@ public class SpecialNetherite implements ModInitializer {
 
 	}
 	public static class EndArmorMaterial implements ArmorMaterial {
-		private static final int[] BASE_DURABILITY = new int[] {15, 17, 18, 13};
+		private static final int[] BASE_DURABILITY = new int[] {55, 57, 58, 53};
 		private static final int[] PROTECTION_VALUES = new int[] {4, 7, 9, 3};
 
 		@Override
@@ -406,9 +406,9 @@ public class SpecialNetherite implements ModInitializer {
 			return 0;
 		}
 	}
-	public static ToolItem END_NETHERITE_SWORD = new SwordItem(EndNetherite.INSTANCE, 20, -3.4f, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem END_NETHERITE_SWORD = new SwordItem(EndNetherite.INSTANCE, 20, -5.4f, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem END_NETHERITE_PICKAXE = new EndNetherite.EndPickaxe(EndNetherite.INSTANCE, 10, -2.8f, new Item.Settings().group(TOOLS).fireproof());
-	public static ToolItem END_NETHERITE_AXE = new EndNetherite.EndAxe(EndNetherite.INSTANCE, 32, -2, new Item.Settings().group(TOOLS).fireproof());
+	public static ToolItem END_NETHERITE_AXE = new EndNetherite.EndAxe(EndNetherite.INSTANCE, 32, 0, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem END_NETHERITE_SHOVEL = new ShovelItem(EndNetherite.INSTANCE, 10f, 0, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem END_NETHERITE_HOE = new EndNetherite.EndHoe(EndNetherite.INSTANCE, 1, 0, new Item.Settings().group(TOOLS).fireproof());
 	public static final ArmorMaterial END_ARMOR_MATERIAL = new EndArmorMaterial();
@@ -416,8 +416,6 @@ public class SpecialNetherite implements ModInitializer {
 	public static final Item END_NETHERITE_CHESTPLATE = new ArmorItem(END_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Settings().group(TOOLS).fireproof());
 	public static final Item END_NETHERITE_LEGGINGS = new ArmorItem(END_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Settings().group(TOOLS).fireproof());
 	public static final Item END_NETHERITE_BOOTS = new ArmorItem(END_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Settings().group(TOOLS).fireproof());
-
-
 	public static void dimensionCrystalToolsArmor() {
 
 		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "overworld_netherite_helmet"), OVERWORLD_NETHERITE_HELMET);
@@ -500,7 +498,6 @@ public class SpecialNetherite implements ModInitializer {
 
 
 	}
-
 	public ToolItem SHARP_NETHERITE_AXE = new SharpNetherite.SharpAxe(SharpNetherite.INSTANCE, 4, 0, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem SHARP_NETHERITE_SWORD = new SwordItem(SharpNetherite.INSTANCE, 0, 0, new Item.Settings().group(TOOLS).fireproof());
 
@@ -557,7 +554,6 @@ public class SpecialNetherite implements ModInitializer {
 		}
 
 	}
-
 	public static ToolItem STRONG_NETHERITE_SWORD = new SwordItem(StrongNetherite.INSTANCE, -7, -3.4f, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem STRONG_NETHERITE_PICKAXE = new StrongNetherite.StrongPickaxe(StrongNetherite.INSTANCE, -11, -2.8f, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem STRONG_NETHERITE_AXE = new StrongNetherite.StrongAxe(StrongNetherite.INSTANCE, -7, -2, new Item.Settings().group(TOOLS).fireproof());
@@ -617,7 +613,6 @@ public class SpecialNetherite implements ModInitializer {
 		}
 
 	}
-
 	public static ToolItem ENCHANTED_NETHERITE_SWORD = new SwordItem(EnchantedNetherite.INSTANCE, -9, -2.4f, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem ENCHANTED_NETHERITE_PICKAXE = new EnchantedNetherite.EnchantedPickaxe(EnchantedNetherite.INSTANCE, -11, -2.8f, new Item.Settings().group(TOOLS).fireproof());
 	public static ToolItem ENCHANTED_NETHERITE_AXE = new EnchantedNetherite.EnchantedAxe(EnchantedNetherite.INSTANCE, -7, -3, new Item.Settings().group(TOOLS).fireproof());
@@ -738,10 +733,33 @@ public class SpecialNetherite implements ModInitializer {
 
 	public static final RegistryKey<Biome> CRYSTAL_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier("specialnetherite", "crystal_biome"));
 
+	public static final Block ENCHANTABILITY_CRYSTAL_BLOCK = new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4.0f).requiresTool());
+	public static final Block STRONG_CRYSTAL_BLOCK = new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4.0f).requiresTool());
+	public static final Block SHARP_CRYSTAL_BLOCK = new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4.0f).requiresTool());
+
+	public static final Block END_CRYSTAL_BLOCK = new Block(FabricBlockSettings.of(Material.AMETHYST).strength(5.0f).requiresTool());
+	public static final Block NETHER_CRYSTAL_BLOCK = new Block(FabricBlockSettings.of(Material.AMETHYST).strength(5.0f).requiresTool());
+	public static final Block OVERWORLD_CRYSTAL_BLOCK = new Block(FabricBlockSettings.of(Material.AMETHYST).strength(5.0f).requiresTool());
 
 	@Override
 	public void onInitialize() {
 		dimensionCrystalToolsArmor();
+
+		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "strong_crystal_block"), STRONG_CRYSTAL_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "sharp_crystal_block"), SHARP_CRYSTAL_BLOCK);
+		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "enchantability_crystal_block"), ENCHANTABILITY_CRYSTAL_BLOCK);
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "enchantability_crystal_block"), new BlockItem(ENCHANTABILITY_CRYSTAL_BLOCK, new FabricItemSettings().group(CRYSTALS)));
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "strong_crystal_block"), new BlockItem(STRONG_CRYSTAL_BLOCK, new FabricItemSettings().group(CRYSTALS)));
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "sharp_crystal_block"), new BlockItem(SHARP_CRYSTAL_BLOCK, new FabricItemSettings().group(CRYSTALS)));
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "overworld_crystal_block"), new BlockItem(OVERWORLD_CRYSTAL_BLOCK, new FabricItemSettings().group(CRYSTALS)));
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "nether_crystal_block"), new BlockItem(NETHER_CRYSTAL_BLOCK, new FabricItemSettings().group(CRYSTALS)));
+		Registry.register(Registry.ITEM, new Identifier("specialnetherite", "end_crystal_block"), new BlockItem(END_CRYSTAL_BLOCK, new FabricItemSettings().group(CRYSTALS)));
+
+		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "nether_crystal_block"), NETHER_CRYSTAL_BLOCK);
+
+		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "end_crystal_block"), END_CRYSTAL_BLOCK);
+
+		Registry.register(Registry.BLOCK, new Identifier("specialnetherite", "overworld_crystal_block"), OVERWORLD_CRYSTAL_BLOCK);
 
 			Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new Identifier("specialnetherite", "crystal_biome"), CRYSTAL_SURFACE_BUILDER);
 			Registry.register(BuiltinRegistries.BIOME, CRYSTAL_KEY.getValue(), CRYSTAL_BIOME);
@@ -871,8 +889,6 @@ public class SpecialNetherite implements ModInitializer {
 					Blocks.DIRT.getDefaultState(),
 					Blocks.STONE.getDefaultState()));
 	private static final Biome CRYSTAL_BIOME = createCrystalBio();
-
-
 	private static Biome createCrystalBio() {
 
 		SpawnSettings.Builder spawnSettings = new SpawnSettings.Builder();

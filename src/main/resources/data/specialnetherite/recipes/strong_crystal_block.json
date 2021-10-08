@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+     "ingredients": [  
+	        {
+            "item": "specialnetherite:strong_crystal"
+        },
+		        {
+            "item": "specialnetherite:strong_crystal"
+        },
+		        {
+            "item": "specialnetherite:strong_crystal"
+        },
+        {
+            "item": "specialnetherite:strong_crystal"
+        }
+    ],
+  "result": {
+    "item": "specialnetherite:strong_crystal_block",
+    "count": 1
+  }
+}
