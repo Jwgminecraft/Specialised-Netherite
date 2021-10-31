@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
   "id": "specialnetherite",
-  "version": "V0.5",
+  "version": "0.6",
 
   "name": "Specialised Netherite",
-  "description": "This mod adds some specialised netherite tools, to add new tiers and difficult choices into the game!",
+  "description": "New tiers of netherite",
   "authors": [
-    "JWG AKA JWGStudios"
+    "JWG"
   ],
   "contact": {
-    "homepage": "",
-    "sources": "https://github.com/JWGardiner/Specialised-Netherite"
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
-  "license": "All Rights Reserved",
+  "license": "ARR",
   "icon": "assets/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.specialnetherite.SpecialNetherite"
+      "net.fabricmc.specialnetherite.specialisednetherite"
     ]
   },
   "mixins": [
