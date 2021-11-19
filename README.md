@@ -21,7 +21,9 @@ Specialised netherite adds more tiers above netherite, these can be used to give
 # Other places to install
 
 Modrinth: https://modrinth.com/mod/special-netherite
+
 CurseForge: https://www.curseforge.com/minecraft/mc-mods/specialised-netherite
+
 My website: https://jwgminecraft.github.io/mods/Specialised-Netherite/index.html
 
 # Other mods
