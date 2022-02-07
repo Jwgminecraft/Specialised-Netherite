@@ -1,3 +1,5 @@
+## Sorry for the long break! I'm working on something!
+
 # Specialised Netherite
 
 Specialised netherite adds more tiers above netherite, these can be used to give different benefits to tools or armour depending on your needs, alongside adding a new biome and a bucnh of other content alonf the way.
