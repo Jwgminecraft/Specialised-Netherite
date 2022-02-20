@@ -1,4 +1,4 @@
-## Sorry for the long break! I'm working on something!
+## Due to the changes in 1.18, i'm discontinuing the mod! Thank you for all the support and i will continue making large mods like this.
 
 # Specialised Netherite
 
